@@ -13,19 +13,19 @@ print(f"{userName} chose {playerInput} while the bot chose {computerAction}.")
 
 if playerInput == computerAction:
     print("It's a tie")
-elif computerAction == 'scissor':
-    if playerInput == 'rock':
-        print(f"{userName} wins by beating scissor with a rock.")
+elif playerInput == 'scissor':
+    if computerAction == 'rock':
+        print(f"{userName} lost the game!.")
     else:
-        print(f"{userName} lost the game!")
-elif computerAction == 'paper':
-    if playerInput == 'scissor':
-        print(f"{userName} wins")
+        print(f"{userName} you win!")
+elif playerInput == 'paper':
+    if computerAction == 'scissor':
+        print(f"{userName} loses!")
     else: 
-        print("You lose")
-elif computerAction == 'rock':
+        print("You win")
+elif playerInput == 'rock':
     if playerInput == 'paper':
-        print(f"{userName} wins by beating paper while a computer chose a rock LOL.")
+        print(f"{userName} loses by beating paper while a computer chose a rock LOL.")
     else:
-        print("You lose.")
+        print("You win.")
 
