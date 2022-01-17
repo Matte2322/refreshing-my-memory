@@ -44,3 +44,6 @@ while(True):
     if userDecides == 'n':
         print("Come back if you want to.")
         break
+    else:
+        print("Okay, your wish is granted.")
+        continue
