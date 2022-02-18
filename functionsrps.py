@@ -23,7 +23,7 @@ myChoice, playerName = choicePlayer(playerName=True, myChoice=True)
 def checkStringResponse():
     print(playerName + " has chosen " + myChoice + " while the computer chose " + randomActionC)
     if myChoice != str and myChoice == float:
-        return False
+        return False # doesn't execute 
 
 print("--------------------------------------------------------------------------------------")
 
@@ -47,10 +47,10 @@ def inAction():
             else:
                 print("YOU LOST BECAUSE THE COMPUTER CHOSE ROCK.")
         else:
-            print("Try again, the word you've inputed makes me not understand what you're trying to say. \nTry to input a word within the directions.")
+            print("Try again, the word you've inputed makes me not understand what you're trying to say. Try to input a word within the directions.")
 
         if myChoice.isdigit():
-            print("Do not input a number, input a word instead.")
+            print("Do not input a number.")
         # ask user to play again
         play_again = input("Do you want to play again? Type 'no' if you don't want to play or type 'yes' if you want to: ")
         if play_again == 'no':
@@ -58,9 +58,5 @@ def inAction():
             break
         else:
             print("Have fun!")
-            os.execl(sys.executable, os.path.abspath('/home/doormat/wife/functionsrps.py'), *sys.argv)
-            
-            
-
-            
+            os.execl(sys.executable, os.path.abspath('/home/doormat/wife/functionsrps.py'), *sys.argv)               
 inAction()
